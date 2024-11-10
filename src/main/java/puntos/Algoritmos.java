@@ -36,7 +36,6 @@ public class Algoritmos {
         distcalcu = 0;
         ParPuntos recta = new ParPuntos();
         double minimo = Double.MAX_VALUE;
-        n++;
 
         double distancia;
 
@@ -130,8 +129,8 @@ public class Algoritmos {
         int opc = der - izq + 1;
         if (opc <= 3) {
             double minDistancia = Double.MAX_VALUE;
-            for (int i = 0; i < puntos.size(); i++) {
-                for (int j = i + 1; j < puntos.size(); j++) {
+            for (int i = izq; i <= der; i++) {
+                for (int j = i + 1; j <= der; j++) {
                     double distancia = distancia2(puntos.get(i), puntos.get(j));
                     if (distancia < minDistancia) {
                         minDistancia = distancia;
@@ -193,8 +192,8 @@ public class Algoritmos {
         int opc = der - izq + 1;
         if (opc <= 3) {
             double minDistancia = Double.MAX_VALUE;
-            for (int i = 0; i < puntos.size(); i++) {
-                for (int j = i + 1; j < puntos.size(); j++) {
+            for (int i = izq; i <= der; i++) {
+                for (int j = i + 1; j <= der; j++) {
                     double distancia = distancia2(puntos.get(i), puntos.get(j));
                     if (distancia < minDistancia) {
                         minDistancia = distancia;
@@ -211,8 +210,8 @@ public class Algoritmos {
         int medio = (izq + der) / 2;
         Punto puntoMedio = puntos.get(medio);
 
-        ParPuntos di = DyV(puntos, izq, medio);
-        ParPuntos dd = DyV(puntos, medio + 1, der);
+        ParPuntos di = DyV_Mejorado(puntos, izq, medio);
+        ParPuntos dd = DyV_Mejorado(puntos, medio + 1, der);
         double Distanciaizq = di.distancia(di.getP2());
         double Distanciader = dd.distancia(dd.getP2());
         double Dmin = Math.min(Distanciaizq, Distanciader);

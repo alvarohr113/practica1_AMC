@@ -1,5 +1,5 @@
 Estrategia: Divide y Venceras
-	Punto 1: x=2234.0, y=1504.4
-	Punto 2: x=2246.7, y=1517.1
-	Distancia: 17.96051224213805
-	Tiempo: 147.8495
+	Punto 1: x=252.4286967767, y=535.1659364856
+	Punto 2: x=252.749309008, y=535.7430385019
+	Distancia: 0.6601809903932513
+	Tiempo: 0.4057
