@@ -5,6 +5,7 @@
 package FrameVisual;
 
 import Comun.Lectura;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import puntos.Algoritmos;
@@ -234,6 +235,7 @@ public class CompararDosEstrategias extends javax.swing.JPanel {
     }//GEN-LAST:event_btvolvermenubtVolverMenu
 
     private void btejecutarbtEjecutar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btejecutarbtEjecutar
+        DecimalFormat df = new DecimalFormat("#########");
         if (num != 2) {
             JOptionPane.showMessageDialog(this,
                     "Debes seleccionar 2 Algoritmos",
@@ -275,7 +277,7 @@ public class CompararDosEstrategias extends javax.swing.JPanel {
                     sol = Algoritmos.exhaustiva((ArrayList<Punto>) p.clone());
                     t2 = System.nanoTime();
                     aux = (double) (t2 - t1) / 1000000;
-                    cadena = cadena + "\t" + aux + "\t" + Algoritmos.getN();
+                    cadena = cadena + "\t" + aux + "\t" + df.format(Algoritmos.getDistcalcu());
                 }
 
                 if (cbexhapoda.isSelected()) {
@@ -283,7 +285,7 @@ public class CompararDosEstrategias extends javax.swing.JPanel {
                     sol = Algoritmos.exhaustivaPoda((ArrayList<Punto>) p.clone());
                     t2 = System.nanoTime();
                     aux = (double) (t2 - t1) / 1000000;
-                    cadena = cadena + "\t" + aux + "\t" + Algoritmos.getN();
+                    cadena = cadena + "\t" + aux + "\t" + df.format(Algoritmos.getDistcalcu());
                 }
 
                 if (cbdyv.isSelected()) {
@@ -291,7 +293,7 @@ public class CompararDosEstrategias extends javax.swing.JPanel {
                     sol = Algoritmos.DyV((ArrayList<Punto>) Menu.dataSetA.clone(), 0, Menu.dataSetA.size()- 1);
                     t2 = System.nanoTime();
                     aux = (double) (t2 - t1) / 1000000;
-                    cadena = cadena + "\t" + aux + "\t" + Algoritmos.getN();
+                    cadena = cadena + "\t" + aux + "\t" + df.format(Algoritmos.getDistcalcu());
                 }
 
                 if (cbdyvm.isSelected()) {
@@ -299,7 +301,7 @@ public class CompararDosEstrategias extends javax.swing.JPanel {
                     sol = Algoritmos.DyV_Mejorado((ArrayList<Punto>) Menu.dataSetA.clone(), 0, Menu.dataSetA.size()- 1);
                     t2 = System.nanoTime();
                     aux = (double) (t2 - t1) / 1000000;
-                    cadena = cadena + "\t" + aux + "\t" + Algoritmos.getN();
+                    cadena = cadena + "\t" + aux + "\t" + df.format(Algoritmos.getDistcalcu());
                 }
 
             }

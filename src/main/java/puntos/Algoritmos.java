@@ -14,13 +14,16 @@ import java.util.Comparator;
 public class Algoritmos {
 
     public static int n;
+    public static double distcalcu;
 
     /*
         CALCULAR DISTANCIA ENTRE DOS PUNTOS
      */
     public static double distancia2(Punto p1, Punto p2) {
         n++;
-        return Math.sqrt(Math.pow(p2.getX() - p1.getX(), 2) + Math.pow(p2.getY() - p1.getY(), 2));
+        double d = Math.sqrt(Math.pow(p2.getX() - p1.getX(), 2) + Math.pow(p2.getY() - p1.getY(), 2));
+        distcalcu += d;
+        return d;
     }
 
     /*
@@ -30,6 +33,7 @@ public class Algoritmos {
      */
     public static ParPuntos exhaustiva(ArrayList<Punto> puntos) {
         n = 0;
+        distcalcu = 0;
         ParPuntos recta = new ParPuntos();
         double minimo = Double.MAX_VALUE;
         n++;
@@ -89,6 +93,7 @@ public class Algoritmos {
 
     public static ParPuntos exhaustivaPoda(ArrayList<Punto> puntos) {
         n = 0;
+        distcalcu = 0;
         quick_sort(puntos, 0, puntos.size() - 1);
         ParPuntos minimo = new ParPuntos(puntos.get(0),puntos.get(1));
         
@@ -118,6 +123,7 @@ public class Algoritmos {
         ParPuntos recta = new ParPuntos();
         if (izq == 0 && der == (puntos.size() - 1)) {
             n = 0;
+            distcalcu = 0;
             quick_sort(puntos, 0, puntos.size() - 1);
         }
 
@@ -180,6 +186,7 @@ public class Algoritmos {
         ParPuntos recta = new ParPuntos();
         if (izq == 0 && der == (puntos.size() - 1)) {
             n = 0;
+            distcalcu = 0;
             quick_sort(puntos, 0, puntos.size() - 1);
         }
 
@@ -241,6 +248,11 @@ public class Algoritmos {
     public static int getN() {
         return n;
     }
+
+    public static double getDistcalcu() {
+        return distcalcu;
+    }
+    
     
     
     
