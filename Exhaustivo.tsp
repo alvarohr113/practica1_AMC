@@ -1,0 +1,5 @@
+Estrategia: Exhaustivo
+	Punto 1: x=252.749309008, y=535.7430385019
+	Punto 2: x=252.749309008, y=535.7430385019
+	Distancia: 0.6601809903932513
+	Tiempo: 1.0745
