@@ -160,7 +160,7 @@ public class ComprobarEstrategia extends javax.swing.JPanel {
         long t2 = System.nanoTime();
         double aux = (double) (t2 - t1) / 1000000;
         dtm.addRow(new Object[]{"Exhaustivo", sol.getP1(), sol.getP2(), df.format(sol.getDistancia()), Algoritmos.getN(), aux});
-        Lectura.generarSolucionCE("Exhaustivo", sol.getP1().toString(), sol.getP1().toString(), sol.getDistancia(), aux);
+        Lectura.generarSolucionCE("Exhaustivo", sol.getP1().toString(), sol.getP2().toString(), sol.getDistancia(), aux);
 
         
         t1 = System.nanoTime();
@@ -168,7 +168,7 @@ public class ComprobarEstrategia extends javax.swing.JPanel {
         t2 = System.nanoTime();
         aux = (double) (t2 - t1) / 1000000;
         dtm.addRow(new Object[]{"Exhaustivo P", sol.getP1(), sol.getP2(), df.format(sol.getDistancia()), Algoritmos.getN(), aux});
-        Lectura.generarSolucionCE("Exhaustivo Poda", sol.getP1().toString(), sol.getP1().toString(), sol.getDistancia(), aux);
+        Lectura.generarSolucionCE("Exhaustivo Poda", sol.getP1().toString(), sol.getP2().toString(), sol.getDistancia(), aux);
 
         
         
@@ -178,14 +178,14 @@ public class ComprobarEstrategia extends javax.swing.JPanel {
         aux = (double) (t2 - t1) / 1000000;
         dtm.addRow(new Object[]{"Divide y Venceras", sol.getP1(), sol.getP2(), df.format(sol.getDistancia()), Algoritmos.getN(), aux});
 
-        Lectura.generarSolucionCE("Divide y Venceras", sol.getP1().toString(), sol.getP1().toString(), sol.getDistancia(), aux);
+        Lectura.generarSolucionCE("Divide y Venceras", sol.getP1().toString(), sol.getP2().toString(), sol.getDistancia(), aux);
 
         t1 = System.nanoTime();
         sol = Algoritmos.DyV_Mejorado((ArrayList<Punto>) Menu.dataSetA.clone(), 0, Menu.dataSetA.size() - 1);
         t2 = System.nanoTime();
         aux = (double) (t2 - t1) / 1000000;
         dtm.addRow(new Object[]{"Divide y Venceras M", sol.getP1(), sol.getP2(), df.format(sol.getDistancia()), Algoritmos.getN(), aux});
-        Lectura.generarSolucionCE("Divide y Venceras Mejorado", sol.getP1().toString(), sol.getP1().toString(), sol.getDistancia(), aux);
+        Lectura.generarSolucionCE("Divide y Venceras Mejorado", sol.getP1().toString(), sol.getP2().toString(), sol.getDistancia(), aux);
         tbtabla.setModel(dtm);
 
         

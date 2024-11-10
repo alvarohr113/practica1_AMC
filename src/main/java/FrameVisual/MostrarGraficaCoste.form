@@ -79,10 +79,13 @@
             <StringItem index="0" value="Exhaustivo"/>
             <StringItem index="1" value="ExhaustivoPoda"/>
             <StringItem index="2" value="Divide y Venceras"/>
-            <StringItem index="3" value="Divide y VencerasPoda"/>
+            <StringItem index="3" value="Divide y Venceras Mejorado"/>
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>

@@ -80,29 +80,29 @@ public class GraficarCoste {
                     n = (i+1) * 100;
                     y[i] = n;
                     casomejor[i] = 14 + 
-                            (((17*pow(3,2) - 17*3)/2) + 5*3 + 12); //Exhaustivo con 3 puntos (CasoMedio)
+                            (((17*pow(3,2) - 17*3)/2) + 5*3 + 12); 
                     
                     casomedio[i] = 2*casomedio[i/2] + (29*n/2) + 77 +
-                            (((17*pow(n/2,2) - 17*n/2)/2) + 5*n/2 + 12); //Exhaustivo con n/2 puntos (CasoMedio)
+                            (((17*pow(n/2,2) - 17*n/2)/2) + 5*n/2 + 12); 
                     
                     casopeor[i] = 2*casopeor[i/2] + 29*n + 77 +
-                            (((17*pow(n,2) - 17*n)/2) + 5*n + 12); //Exhaustivo con n punto (CasoMedio)
+                            (((17*pow(n,2) - 17*n)/2) + 5*n + 12);
                     
                 }
                 break;
         
-            case "Divide y VencerasPoda":
+            case "Divide y Venceras Mejorado":
                 for (int i = 0; i < 10; i++) {
                     n = (i+1) * 100;
                     y[i] = n;
                     casomejor[i] = 16 + 
-                            (((17*pow(3,2) - 17*3)/2) + 5*3 + 12); //Exhaustivo con 3 puntos (CasoMedio)
+                            (((17*pow(3,2) - 17*3)/2) + 5*3 + 12); 
                     
                     casomedio[i] = 2*casomedio[i/2] + 29*n/2 + 7*n/2 + 92 +
-                            (130*n/2 + 9);   //Exhaustivo11 (CasoMedio)
+                            (130*n/2 + 9);   
                     
                     casopeor[i] = 2*casopeor[i/2] + 29*n + 7*n + 92 +
-                            (130*n + 9);   //Exhaustivo11 (CasoMedio)
+                            (130*n + 9);
                 }
                 break;
         }

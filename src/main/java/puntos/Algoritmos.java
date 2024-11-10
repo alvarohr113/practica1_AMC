@@ -93,8 +93,6 @@ public class Algoritmos {
         ParPuntos minimo = new ParPuntos(puntos.get(0),puntos.get(1));
         
 
-        double distancia;
-
         for (int i = 0; i < puntos.size(); i++) {
             for (int j = i + 1; j < puntos.size(); j++) {
                 if(puntos.get(j).getX() - puntos.get(i).getX() <= minimo.getDistancia())
@@ -103,7 +101,6 @@ public class Algoritmos {
                     ParPuntos aux = new ParPuntos(puntos.get(i),puntos.get(j));
                 if ( aux.getDistancia()< minimo.getDistancia()) {
                     minimo.setDistancia( aux.getDistancia());
-                    
                     minimo.setPuntos(aux.getP1(), aux.getP2());
                 }
                     
@@ -167,7 +164,6 @@ public class Algoritmos {
             }
         }
 
-        //puntosRange.sort(Comparator.comparingDouble(Punto::getX));
         for (int i = 0; i < puntosRange.size(); i++) {
             for (int j = i + 1; j < puntosRange.size(); j++) {
                 double distancia = distancia2(puntosRange.get(i), puntosRange.get(j));
